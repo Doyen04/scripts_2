@@ -10,4 +10,8 @@ df['DATE OF BIRTH UPDATED'] = pd.to_datetime(df['DATE OF BIRTH UPDATED']).dt.str
 # Save back to Excel
 with open('output.txt', 'w') as f:
     for _, row in df.iterrows():
+
         f.write(f"Update policymaster set DateofBirth='{row['DATE OF BIRTH UPDATED']}' where policyno='{row['Policy No']}' \n")
+
+
+
